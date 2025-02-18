@@ -1,18 +1,191 @@
-.card-img-div
-{
+
+/* * * * * 임지윤 시작 * * * * */
+
+/* 타이틀 */
+.title-container {
+    position: relative;
+    height: 1000px;
+    background-image: url('https://images.unsplash.com/photo-1701028281066-2b939f132941?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; /* 눈송이가 타이틀 바깥으로 나가지 않게 함 */
+}
+
+/* 제목 (투돌프와 아이들) */
+h1 {
+    font-size: 6rem;
+    margin: 100px 80px 0px 0px;
+    text-align: center;
+    color: white;
+}
+
+.nav-item {
+    margin-right: 50px;
+}
+
+/* 아래 화살표 버튼 */
+#title-button {
+    font-size: 100px;
+    color: white;
+    margin: 0px 80px 0px 0px;
+}
+
+/* 임시로 만들어 둔 섹션 */
+section {
+    height: 400px;
+}
+
+
+/* 눈 내리는 효과 */
+.snow-wrapper .snow {
+    position: absolute;
+    top: -10%;
+    z-index: 9999;
+    color: #fff;
+    text-shadow : 0 0 5px rgba(0, 0, 0, 0.25);
+    animation: snow_shake 3s ease-in-out infinite;  
+    user-select: none;
+    font-size: 25px;
+}
+
+.snow-wrapper .snow p { animation: snow_fall 10s linear infinite; }
+
+.snow-wrapper .snow:nth-of-type(0) { left: 0%; animation-delay: 0s; }
+.snow-wrapper .snow:nth-of-type(0) p { animation-delay: 0s; }
+.snow-wrapper .snow:nth-of-type(1) { left: 10%; animation-delay: 1s; }
+.snow-wrapper .snow:nth-of-type(1) p { animation-delay: 1s; }
+.snow-wrapper .snow:nth-of-type(2) { left: 20%; animation-delay: 0.5s; }
+.snow-wrapper .snow:nth-of-type(2) p { animation-delay: 6s; }
+.snow-wrapper .snow:nth-of-type(3) { left: 30%; animation-delay: 2s; }
+.snow-wrapper .snow:nth-of-type(3) p { animation-delay: 4s; }
+.snow-wrapper .snow:nth-of-type(4) { left: 40%; animation-delay: 2s; }
+.snow-wrapper .snow:nth-of-type(4) p { animation-delay: 2s; }
+.snow-wrapper .snow:nth-of-type(5) { left: 50%; animation-delay: 3s; }
+.snow-wrapper .snow:nth-of-type(5) p { animation-delay: 8s; }
+.snow-wrapper .snow:nth-of-type(6) { left: 60%; animation-delay: 2s; }
+.snow-wrapper .snow:nth-of-type(6) p { animation-delay: 6s; }
+.snow-wrapper .snow:nth-of-type(7) { left: 70%; animation-delay: 1s; }
+.snow-wrapper .snow:nth-of-type(7) p { animation-delay: 2.5s; }
+.snow-wrapper .snow:nth-of-type(8) { left: 80%; animation-delay: 0s; }
+.snow-wrapper .snow:nth-of-type(8) p { animation-delay: 1s; }
+.snow-wrapper .snow:nth-of-type(9) { left: 90%; animation-delay: 1.5s; }
+.snow-wrapper .snow:nth-of-type(9) p { animation-delay: 3s; }
+.snow-wrapper .snow:nth-of-type(10) { left: 25%; animation-delay: 0.5s; }
+.snow-wrapper .snow:nth-of-type(10) p { animation-delay: 2s; }
+.snow-wrapper .snow:nth-of-type(11) { left: 65%; animation-delay: 2.5s; }
+.snow-wrapper .snow:nth-of-type(11) p { animation-delay: 4s; }
+.snow-wrapper .snow:nth-of-type(12) { left: 85%; animation-delay: 2s; }
+.snow-wrapper .snow:nth-of-type(12) p { animation-delay: 7.5s; }
+.snow-wrapper .snow:nth-of-type(13) { left: 5%; animation-delay: 0s; }
+.snow-wrapper .snow:nth-of-type(13) p { animation-delay: 2.5s; }
+.snow-wrapper .snow:nth-of-type(14) { left: 45%; animation-delay: 1.5s; }
+.snow-wrapper .snow:nth-of-type(14) p { animation-delay: 3.5s; }
+.snow-wrapper .snow:nth-of-type(15) { left: 75%; animation-delay: 1s; }
+.snow-wrapper .snow:nth-of-type(15) p { animation-delay: 2s; }
+.snow-wrapper .snow:nth-of-type(16) { left: 35%; animation-delay: 2.5s; }
+.snow-wrapper .snow:nth-of-type(16) p { animation-delay: 4.5s; }
+.snow-wrapper .snow:nth-of-type(17) { left: 15%; animation-delay: 1s; }
+.snow-wrapper .snow:nth-of-type(17) p { animation-delay: 3s; }
+.snow-wrapper .snow:nth-of-type(18) { left: 95%; animation-delay: 0s; }
+.snow-wrapper .snow:nth-of-type(18) p { animation-delay: 2s; }
+
+@keyframes snow_shake {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(80px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes snow_fall {
+    0% {
+        transform: translateY(10vh);
+    }
+    100% {
+        transform: translateY(130vh);
+    }
+}
+/* 눈 내리는 효과 끝 */
+
+/* * * * * 임지윤 끝 * * * * */
+
+
+
+/* * * * * 이소미 시작 * * * * */
+
+/* 팀소개 여백 */
+#present {
+    margin: 50px 0px;
+}
+
+/* 카드 컨테이너 */
+.team-card-container {
+    max-width: 1100px;
+    display: flex;
+    border: 3px solid #ddd; /* 테두리 추가 */
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 팀 소개 이미지 */
+.team-card-container .team-card {
+    flex: 1;
+    height: 100%;
+}
+
+.team-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 팀 소개 텍스트 */
+.team-text {
+    flex: 1;
+    padding: 30px;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.team-text h5 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.team-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+/* * * * * 이소미 끝 * * * * */
+
+
+
+.card-img-div {
     width: 100%;
     height: 300px;
 }
 
-.card-img-top
-{
+.card-img-top {
     height: 100%;
 }
 
-.card:hover{
+.card:hover {
     background-color: #c9e3fa;
     transform: translateY(-10px) scale(1.05);
     transition: 0.3s;
+<<<<<<< HEAD
 }
 
 /* 이소미 시작 */
@@ -68,3 +241,6 @@
             line-height: 1.6;
         }
 /* 이소미 종료 */
+=======
+}
+>>>>>>> 3c021973be77407d0e4b80c8051a91eb7d9fc6f7
