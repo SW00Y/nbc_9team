@@ -217,6 +217,10 @@ h1 {
     cursor: pointer;
 }
 
+.bg-gray{
+    background-color: #e4e4e4;
+}
+
 /* 이소미 시작 */
 /* 팀소개 여백 */
 .present {

@@ -42,7 +42,7 @@ document.querySelectorAll('.scroll-link').forEach(link => {
 
  $(document).ready(function () {
     let member_list = [
-        { name: "이귀현", img: "./static/img/1.jpg", site: "test.html" },
+        { name: "이귀현", img: "./static/img/1.jpg", site: "./static/page/1/LKH.html" },
         { name: "조효준", img: "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA4MjVfMjU4%2FMDAxNTk4MzQ5MjA5Mjk4.xjoAjApPGvG5j3pW567M2oclWwj1cwItMSsAeGg6blQg.PJQYKRFW1qBN3QZi03j428ToeB2ltMvEEa0NPg0F09Qg.JPEG.2tnwjd3%2FIMG_9967.JPG&type=sc960_832", site: "2" },
         { name: "이소미", img: "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMTNfMTk2%2FMDAxNzI4ODAxNDc5ODU0.ZBhA59TzCHWsWttzFse50mrUmHE4JxlWWWn30QHravwg.CteUrknH3TdccuW2a94C26Zt3vpdxUy-R9piDGbgWYsg.PNG%2Fimage.png&type=sc960_832", site: "3" },
         { name: "임지윤", img: "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fcdn.ibispaint.com%2Fmovie%2F119%2F334%2F119334707%2Fimage119334707l.png&type=sc960_832", site: "4" },
