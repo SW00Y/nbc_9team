@@ -1,27 +1,34 @@
 // 임지윤 시작
 
-/* 내비게이션 바 스크롤 */
+/* 스크롤 이동 기능 시작 */
 document.querySelectorAll('.scroll-link').forEach(link => {
     link.addEventListener('click', function (event) {
         event.preventDefault(); // 브라우저 기본 동작 방지
 
+        const scrollContainer = document.querySelector('.scroll-container');
         const targetId = this.getAttribute('data-target');
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-            // 타겟으로 이동할 위치 계산
-            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            // 스크롤 스냅 기능 임시 비활성화 (기능 간 충돌 방지)
+            scrollContainer.style.scrollSnapType = 'none';
 
-            // 내비게이션 바의 높이 가져오기
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            window.scrollTo({
-                top: targetPosition - navbarHeight, // 내비게이션 바의 높이만큼 스크롤 위치를 수정
+            // 타겟으로 이동할 위치 계산
+            const targetPosition = targetElement.getBoundingClientRect().top + scrollContainer.scrollTop;
+
+            scrollContainer.scrollTo({
+                top: targetPosition,
                 behavior: 'smooth'
             });
+
+            // 스크롤이 끝난 후 스냅 기능 복구
+            setTimeout(() => {
+                scrollContainer.style.scrollSnapType = 'y mandatory';
+            }, 1000); // 1초 후 복구 (애니메이션 완료 후)
         }
     });
 });
-/* 내비게이션 바 스크롤 끝 */
+/* 스크롤 이동 기능 끝 */
 
 // 임지윤 끝
 
