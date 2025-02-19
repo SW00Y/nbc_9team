@@ -282,10 +282,10 @@ h1 {
 
 /* 이소미 종료 */
 
-/*조효준 방명록 스타일 */
+/*조효준시작 */
 .guest-book-container {
     width: 80%;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -334,32 +334,30 @@ button:hover {
 
 
 .message-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 80%;
-    max-width: 600px;
+    max-width: 800px;
     border: 2px solid #333;
     padding: 20px;
     border-radius: 12px;
     background-color: #fdf6e3;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
+
+    overflow: auto;
 }
 
 .button-group {
-    display: flex;
-    gap: 5px;
+    float: right;
 }
 
 
 .edit-btn {
     background-color: #0067A3;
-    padding: 8px 16px;
 }
 
 .delete-btn {
     background-color: #e74c3c;
-    padding: 8px 16px;
+    margin-left: 5px;
 }
-/*조효준 스타일 종료*/
+
+/*조효준종료*/
