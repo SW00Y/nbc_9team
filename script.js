@@ -2,16 +2,16 @@
 
 /* 내비게이션 바 스크롤 */
 document.querySelectorAll('.scroll-link').forEach(link => {
-    link.addEventListener('click', function(event) {
+    link.addEventListener('click', function (event) {
         event.preventDefault(); // 브라우저 기본 동작 방지
-        
+
         const targetId = this.getAttribute('data-target');
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
             // 타겟으로 이동할 위치 계산
             const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-            
+
             // 내비게이션 바의 높이 가져오기
             const navbarHeight = document.querySelector('.navbar').offsetHeight;
             window.scrollTo({
@@ -87,6 +87,10 @@ const loadMessages = () => {
             textSpan.textContent = `${name}: ${message}`;
             listItem.appendChild(textSpan);
 
+            // 수정 버튼과 삭제 버튼을 감싸는 div 추가
+            const buttonGroup = document.createElement('div');
+            buttonGroup.className = 'button-group';
+
             // 수정 버튼 생성
             const editButton = document.createElement('button');
             editButton.className = 'edit-btn';
@@ -101,6 +105,9 @@ const loadMessages = () => {
             deleteButton.textContent = '삭제';
             deleteButton.onclick = () => deleteMessage(id);
             listItem.appendChild(deleteButton);
+
+            // 버튼 그룹을 리스트 아이템에 추가
+            listItem.appendChild(buttonGroup);
 
             //이번 메세지 부분
             messageBox.appendChild(listItem);
