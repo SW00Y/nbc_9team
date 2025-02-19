@@ -76,7 +76,7 @@
 
 
     <!-- 이소미 시작 -->
-    <section id="team-description">
+    <section id="team-description" >
       <div class="scroll-area d-flex flex-column align-items-center justify-content-center" id="team-description-container">
         <div class="text-center present">
           <h2 class="section-heading text-uppercase">팀 소개</h2>
@@ -92,8 +92,10 @@
               </div>
               <!-- 팀소개 -->
               <div class="team-text">
-                <h5>투돌프와 아이들</h5>
-                <p>2마리의 루돌프와 3명의 아이들</p>
+                <h3>투돌프와 아이들</h3>
+                <hr>
+                <p>"투돌프와 아이들"은 열정과 호기심으로 똘똘 뭉친 초보 개발자들이 모여 성장하는 팀입니다. 🎅✨
+                    산타클로스의 썰매를 이끄는 루돌프처럼, 우리는 함께 나아가며 서로를 빛나게 만듭니다!</p>
               </div>
             </div>
           </div>
@@ -128,22 +130,27 @@
 
 
       <!-- 조효준 시작 -->
-      <div class= "scroll-area bg-gray" style="height:800px;">
-      <div class="guest-book-container" id="guest-book-container" style="display: block;">
-        <h3>방명록</h3>
-        <form id="guestBookForm">
-          <label for="name">이름:</label>
-          <br>
-          <input type="text" id="name" name="name" required placeholder="이름을 입력하세요">
-          <br>
-          <label for="message">내용:</label>
-          <br>
-          <textarea id="message" name="message" required placeholder="방명록 내용을 입력하세요"></textarea>
-          <button type="submit">저장</button>
-        </form>
-
-        <h4>방명록 내용</h4>
-        <ul id="guestMessages"></ul>
+      <div class= "scroll-area bg-gray">
+        <div class="guest-book-container" id="guest-book-container">
+          <div class="guest-book">
+              <h3>방명록</h3>
+              <form id="guestBookForm">
+                  <label for="name">이름:</label>
+                  <br>
+                  <input type="text" id="name" name="name" required placeholder="이름을 입력하세요">
+                  <br>
+                  <label for="message">내용:</label>
+                  <br>
+                  <!-- textarea + 버튼을 감싸는 div 추가 -->
+                  <div class="input-submit-container">
+                      <textarea id="message" name="message" required placeholder="방명록 내용을 입력하세요"></textarea>
+                      <button type="submit">저장</button>
+                  </div>
+              </form>
+      
+              <h4>방명록 내용</h4>
+              <ul id="guestMessages"></ul>
+          </div>
       </div>
       <!-- 조효준 끝 -->
   </div>

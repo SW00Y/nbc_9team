@@ -1,0 +1,215 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+/* 공통 스타일 */
+body {
+    overflow: hidden;
+    font-family: 'Roboto Slab', serif;
+}
+
+h3 {
+    font-family: 'Pretendard-Thin';
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+h3 strong {
+    font-weight: bold;
+}
+
+/* 네비게이션 스타일 */
+.menu * {
+    display: inline;
+}
+
+.menu li {
+    margin: 35px;
+}
+
+.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu ul {
+    padding-left: 0px;
+}
+
+.menu {
+    font-size: 20px;
+    font-style: italic;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+/* 메인 페이지 */
+.one {
+    background-size: cover;
+    text-align: center;
+    padding-top: 180px;
+    padding-bottom: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    padding: 0.5rem;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.profile img {
+    border-radius: 30%;
+}
+
+/* 두 번째 페이지 */
+.intext {
+    float: right;
+    margin-top: 35px;
+    padding-left: 50px;
+}
+
+/* 세 번째 페이지 */
+h1 {
+    text-align: center;
+}
+
+.lists {
+    text-align: center;
+    font-family: 'Pretendard-Thin';
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.list_img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 7vh 5vh;
+    margin-bottom: 50px;
+}
+
+.favorites {
+    display: inline-flex;
+    margin-top: 60px;
+}
+
+/* 스크롤 스타일 */
+#container {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+.list:nth-child(1) {
+    background-color: rgb(0, 0, 0);
+}
+
+.list:nth-child(2) {
+    background-color: black;
+}
+
+.list:nth-child(3) {
+    background-color: #303030;
+}
+
+.list:nth-child(4) {
+    background-color: #e0d8cc;
+}
+
+/* 말풍선 */
+/* 2페이지에서 이미지와 말풍선이 세로로 나란히 배치되도록 */
+.two {
+    display: flex;                /* Flexbox로 배치 */
+    justify-content: flex-start;  /* 왼쪽 정렬 */
+    align-items: flex-start;      /* 세로 정렬 */
+    padding: 50px;
+}
+
+.me {
+    width: 450px;  /* 이미지 크기 */
+    height: 500px;
+    border-radius: 10px;
+    margin-right: 20px; /* 이미지와 말풍선 간의 간격 */
+}
+
+.speech-bubble-container {
+    display: flex;
+    flex-direction: column;  /* 세로로 정렬 */
+    align-items: center;  /* 세로 방향으로 중앙 정렬 */
+    gap: 20px;  /* 말풍선 간 간격 */
+    position: relative; /* 말풍선이 겹치지 않도록 */
+    margin: 15% 0 0 0;
+    font-family: 'Pretendard-Thin';
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* 말풍선 스타일 */
+.speech-bubble {
+    position: relative;
+    background: #ffffff;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;  /* 말풍선 크기 */
+    height: 50px;
+    
+    display: flex;  /* Flexbox로 가로, 세로 중앙 정렬 */
+    justify-content: left;  /* 가로 중앙 정렬 */
+    align-items: center;  /* 세로 중앙 정렬 */
+    text-align: left;  /* 텍스트 왼쪽 정렬 */
+}
+
+/* 말풍선 위치 */
+.bubble1, .bubble2, .bubble3, .bubble4 {
+    right: 20%;
+}
+
+/* 네비 슬라이드시 색상 변경 */
+.menu ul li a {
+    color: white; /* 기본 색상 */
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu ul li a.active {
+    color: red; /* 활성화된 링크의 색상 */
+    font-weight: bold;
+}
+.speech-bubble .fa-brands {
+    font-size: 20px;
+    margin-left: 10px;
+    color: black;
+}

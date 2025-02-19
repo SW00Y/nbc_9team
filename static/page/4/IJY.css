@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Send+Flowers&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('https://img.freepik.com/premium-vector/seamless-snowflakes-pattern-winter-new-year-theme-this-snowflake-pattern-collection-is-idea_107335-831.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 폰트 설정 시작 */
+.send-flowers-regular {
+    font-family: "Send Flowers", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* 폰트 설정 끝 */
+
+/* 스크롤 스냅 기능 시작 */
+.scroll-container {
+    height: 100vh;
+    overflow-y: auto; /* 내부에서만 스크롤 */
+    scroll-snap-type: y mandatory; /* 세로 스크롤 스냅 */
+}
+
+.scroll-area {
+    scroll-snap-align: start;
+    /* 각 섹션이 스냅됨 */
+    min-height: 100vh;
+    /* 한 화면을 꽉 채움 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-dummy {
+    scroll-snap-align: start; /* 각 섹션이 스냅됨 */
+}
+/* 스크롤 스냅 기능 끝 */
+
+.self-introduction-container {
+    height: 100vh; /* 한 화면을 꽉 채움 */
+}
+
+.self-introduction-section-1 {
+    width: 40%;
+    height: 100%;
+}
+
+.self-introduction-section-2 {
+    width: 60%;
+    height: 100%;
+}
+
+.profile-picture-container {
+    background-color: aqua;
+    border-radius: 100%;
+}
+
+#profile-picture {
+    image-rendering: pixelated;
+    border-radius: 100%;
+}
+
+.self-introduction-content-wrapper {
+    width: 100%;
+}
+
+.self-introduction-content {
+    font-size: 3rem;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.self-introduction-content td {
+    padding: 10px 50px 10px 50px;
+}
+
+.quote-container {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.project-title {
+    font-size: 5rem;
+    color: white;
+    margin: 0px 0px 20px 0px;
+    text-shadow: 0px 0px 15px #435f5d;
+}
+
+.project-card {
+    width: 18rem;
+    margin: 0px 15px 0px 15px;
+}
+
+.project-card-image {
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+
+}
+
+.card-title {
+    font-size: 2rem;
+}
+
+.card-text {
+    font-size: 1.5rem;
+}
+
+.project-btn {
+    background-color: #bececc;
+    color: white;
+    font-size: 1.5rem;
+    width: 100px;
+    height: 40px;
+}
+
+.goal-container {
+    font-size: 2rem;
+}
+
+.goal-title {
+    font-size: 5rem;
+    color: #435f5d;
+    margin: 0px 0px 20px 0px;
+    text-shadow: 0px 0px 15px #bececc;
+}
+
+.goal-content {
+    font-size: 3rem;
+}
+
+/* 마지막 섹션은 100vh로 고정하지 않고, footer 포함해서 자연스럽게 이어지게 */
+.last-section {
+    min-height: calc(100vh - 50px); /* footer 높이만큼 빼서 자연스럽게 보이게 함 */
+}
+
+footer {
+    font-size: 2rem;
+    scroll-snap-align: none;
+    height: 50px;
+}
+
+.translucent-box {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* 흰색 + 70% 투명도 */
+}
+
+.speech-bubble {
+	position: relative;
+	background: #bececc;
+	border-radius: 1em;
+    width: 800px;
+    height: 400px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 1em solid transparent;
+	border-left-color: #bececc;
+	border-right: 0;
+	margin-top: -1em;
+	margin-right: -1em;
+}

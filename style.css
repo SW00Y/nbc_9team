@@ -1,8 +1,12 @@
 /* * * * * 임지윤 시작 * * * * */
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Dongle&family=Gowun+Dodum&family=Noto+Sans+KR:wght@100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Send+Flowers&display=swap');
+
+
 /* 폰트 시작 */
-.gowun-dodum-regular {
+.gowun-dodum-regular,
+body {
     font-family: "Gowun Dodum", serif;
     font-weight: 400;
     font-style: normal;
@@ -189,7 +193,7 @@ h1 {
 }
 
 .team-text p {
-    font-size: 16px;
+    font-size: 26xpx;
     color: #666;
     line-height: 1.6;
 }
@@ -197,6 +201,12 @@ h1 {
 /* * * * * 이소미 끝 * * * * */
 
 
+/* 성우영 시작*/
+
+#member-card img {
+    object-fit: cover;
+    overflow: hidden;
+    }
 
 .card-img-div {
     width: 100%;
@@ -220,6 +230,13 @@ h1 {
 .bg-gray{
     background-color: #e4e4e4;
 }
+
+.card-title{
+    text-align: center;
+}
+
+/* 성우영 종료 */
+
 
 /* 이소미 시작 */
 /* 팀소개 여백 */
@@ -278,11 +295,7 @@ h1 {
     color: #333;
 }
 
-.team-text p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-}
+
 
 /* 이소미 종료 */
 
