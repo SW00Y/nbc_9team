@@ -12,7 +12,9 @@
 
 <body>
   <!-- 임지윤 시작 -->
+  <div class="scroll-container">
   <header>
+    <div class="scroll-dummy"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <!-- Container wrapper -->
       <div class="container-fluid">
@@ -69,24 +71,24 @@
 
 
   <!-- 이소미 시작 -->
-  <div class="text-center" id="team-description">
-    <h2 class="section-heading text-uppercase">ABOUT</h2>
-    <h5 class="section-subheading text-muted"></h5>
-  </div>
-
-  <!-- 카드 박스 -->
-  <div class="d-flex justify-content-center">
-    <div class="team-card-container">
-      <!-- 팀 소개 이미지 -->
-      <div class="team-card">
-        <img
-          src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/4arX/image/okKVeMMUUBAoUYUrEAzKkmY-9KA.jpg"
-          alt="팀 이미지">
-      </div>
-      <!-- 팀소개 -->
-      <div class="team-text">
-        <h5>팀명 : 투돌프와 아이들</h5>
-        <p>2마리의 루돌프와 3명의 아이들</p>
+  <div class="team-description-container scroll-area d-flex flex-column align-items-center justify-content-center">
+    <div class="text-center" id="team-description">
+      <h2 class="section-heading text-uppercase">ABOUT</h2>
+      <h5 class="section-subheading text-muted"></h5>
+    </div>
+  
+    <!-- 카드 박스 -->
+    <div class="d-flex justify-content-center">
+      <div class="team-card-container">
+        <!-- 팀 소개 이미지 -->
+        <div class="team-card">
+          <img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/4arX/image/okKVeMMUUBAoUYUrEAzKkmY-9KA.jpg" alt="팀 이미지">
+        </div>
+        <!-- 팀소개 -->
+        <div class="team-text">
+          <h5>팀명 : 투돌프와 아이들</h5>
+          <p>2마리의 루돌프와 3명의 아이들</p>
+        </div>
       </div>
     </div>
   </div>
@@ -95,7 +97,7 @@
 
 
   <!-- 이귀현 시작-->
-  <div class="p-5 mb-4 bg-body-tertiary rounded-3" id="team-goal">
+  <div class="scroll-area p-5 mb-4 bg-body-tertiary rounded-3" id="team-goal">
     <div class="container-fluid py-5">
       <h1 class="display-5 fw-bold">팀 목표 or 각오</h1>
       <hr>
@@ -110,7 +112,7 @@
 
 
   <!-- 성우영 시작-->
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4" id="member-card">
+  <div class="scroll-area row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4" id="member-card">
 
     <div class="col">
       <div class="card">
@@ -195,7 +197,7 @@
   </div>
   <!-- 성우영 종료 -->
   <!-- 조효준 시작 -->
-<div class="guest-book">
+<div class="guest-book scroll-area">
   <h3>방명록</h3>
   <form id="guestBookForm">
       <label for="name">이름:</label>
@@ -210,6 +212,7 @@
 
   <h4>방명록 내용</h4>
   <ul id="guestMessages"></ul>
+</div>
 </div>
 <!-- 조효준 끝 -->
   <script src="./script.js"></script>

@@ -16,7 +16,6 @@
     font-weight: 400;
     font-style: normal;
 }
-
 /* 폰트 끝 */
 
 /* 타이틀 */
@@ -26,8 +25,7 @@
     background-image: url('https://images.unsplash.com/photo-1701028281066-2b939f132941?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-position: center;
     background-size: cover;
-    overflow: hidden;
-    /* 눈송이가 타이틀 바깥으로 나가지 않게 함 */
+    overflow: hidden; /* 눈송이가 타이틀 바깥으로 나가지 않게 함 */
 }
 
 /* 제목 (투돌프와 아이들) */
@@ -114,6 +112,26 @@ h1 {
 }
 /* 눈 내리는 효과 끝 */
 
+/* 스크롤 스냅 기능 시작 */
+.scroll-container {
+    height: 100vh;
+    overflow-y: auto; /* 내부에서만 스크롤 */
+    scroll-snap-type: y mandatory; /* 세로 스크롤 스냅 */
+}
+
+.scroll-area {
+    scroll-snap-align: start; /* 각 섹션이 스냅됨 */
+    min-height: 100vh; /* 한 화면을 꽉 채움 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-dummy {
+    scroll-snap-align: start; /* 각 섹션이 스냅됨 */
+}
+/* 스크롤 스냅 기능 끝 */
+  
 /* * * * * 임지윤 끝 * * * * */
 
 
