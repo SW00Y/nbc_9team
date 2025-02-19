@@ -293,12 +293,24 @@ h1 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border: 2px solid #ddd;
 }
-.guest-book-container h3, 
-.guest-book-container h4 {
+.guest-book-container h3 {
+    font-size: 24px;  /* 방명록 제목 크기 */
+    font-weight: bold;  /* 굵게 */
     display: block;
     width: 100%;
-    text-align: left;  /* 왼쪽 정렬 */
+    text-align: left;
+    margin-bottom: 20px; /* 아래 여백 추가 */
+    margin-top: 0;
+}
+
+.guest-book-container h4 {
+    font-size: 20px;  /* 방명록 내용 제목 크기 */
+    font-weight: normal;  /* 기본 굵기 */
+    display: block;
+    width: 100%;
+    text-align: left;
     margin-bottom: 10px; /* 아래 여백 */
+    margin-top: 0;
 }
 .guest-book ul {
     list-style-type: none;
