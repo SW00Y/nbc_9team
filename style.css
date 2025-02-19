@@ -297,25 +297,7 @@ h1 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border: 2px solid #ddd;
 }
-.guest-book-container h3 {
-    font-size: 24px;  /* 방명록 제목 크기 */
-    font-weight: bold;  /* 굵게 */
-    display: block;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 20px; /* 아래 여백 추가 */
-    margin-top: 0;
-}
 
-.guest-book-container h4 {
-    font-size: 20px;  /* 방명록 내용 제목 크기 */
-    font-weight: normal;  /* 기본 굵기 */
-    display: block;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 10px; /* 아래 여백 */
-    margin-top: 0;
-}
 .guest-book ul {
     list-style-type: none;
     padding: 0;
@@ -327,22 +309,52 @@ h1 {
 
 textarea {
     width: 80%;
-    padding: 8px;
+    padding: 10px;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     box-sizing: border-box;
 }
 
-input[type="text"] {
-    width: 30%;
-    padding: 8px;
+/* 입력 필드와 버튼을 감싸는 컨테이너 */
+.input-submit-container {
+    display: flex;
+    align-items: flex-start;
+    /* textarea와 버튼 높이 맞춤 */
+    gap: 10px;
+    /* 입력 필드와 버튼 사이 여백 */
+    width: 100%;
+}
+
+/* 내용 입력 칸 (textarea) */
+textarea {
+    flex: 1;
+    /* 가변 너비 설정 */
+    padding: 10px;
     font-size: 16px;
-    margin-bottom: 10px;
     box-sizing: border-box;
+}
+
+/* 저장 버튼 */
+button[type="submit"] {
+    height: 100%;
+    /* textarea 높이에 맞춤 */
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    /* 버튼 텍스트 줄바꿈 방지 */
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
 }
 
 button {
-    margin-top: 10px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
     padding: 10px 20px;
     background-color: #000000;
     color: white;
@@ -381,5 +393,4 @@ button:hover {
     background-color: #e74c3c;
     margin-left: 5px;
 }
-
 /*조효준종료*/

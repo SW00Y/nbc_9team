@@ -1,18 +1,23 @@
 <!-- 조효준 시작 -->
-<div class="guest-book-container scroll-area">
-    <h3>방명록</h3>
-    <form id="guestBookForm">
-        <label for="name">이름:</label>
-        <br>
-        <input type="text" id="name" name="name" required placeholder="이름을 입력하세요">
-        <br>
-        <label for="message">내용:</label>
-        <br>
-        <textarea id="message" name="message" required placeholder="방명록 내용을 입력하세요"></textarea>
-        <button type="submit">저장</button>
-    </form>
+<div class="guest-book-container">
+    <div class="guest-book">
+        <h3>방명록</h3>
+        <form id="guestBookForm">
+            <label for="name">이름:</label>
+            <br>
+            <input type="text" id="name" name="name" required placeholder="이름을 입력하세요">
+            <br>
+            <label for="message">내용:</label>
+            <br>
+            <!-- textarea + 버튼을 감싸는 div 추가 -->
+            <div class="input-submit-container">
+                <textarea id="message" name="message" required placeholder="방명록 내용을 입력하세요"></textarea>
+                <button type="submit">저장</button>
+            </div>
+        </form>
 
-    <h4>방명록 내용</h4>
-    <ul id="guestMessages"></ul>
+        <h4>방명록 내용</h4>
+        <ul id="guestMessages"></ul>
+    </div>
 </div>
 <!-- 조효준 끝 -->
