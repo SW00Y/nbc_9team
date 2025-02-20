@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개 페이지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* 고정 네비게이션 */
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            height: 100vh; /* 모든 섹션을 화면 높이에 맞춤 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 🎤 인사말 섹션 */
+        .greeting {
+            display: flex;
+            flex-direction: column; /* 세로로 배치 */
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+            gap: 20px; /* 버튼과 인사말 사이의 간격 */
+        }
+
+        /* 🎵 음악 섹션 (배경을 하늘색으로 변경) */
+        #music {
+            background-color: skyblue; /* 하늘색 배경 */
+
+            display: none; /* 기본적으로 숨겨놓음 */
+        }
+
+        .music-controls {
+            display: flex;
+            gap: 20px;
+        }
+
+        .music-controls button {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .music-controls button:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        /* 🧑‍💻 자기소개 페이지 */
+        #profile {
+            background-color: #f4a261;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* 🔗 링크 섹션 */
+        #links {
+            background-color: #333;
+            color: white;
+            padding: 50px 0;
+        }
+
+        .image-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .image-links img {
+            width: 100px;
+            border-radius: 10px; /* 모서리 둥글게 */
+            transition: transform 0.3s; /* 마우스 올릴 때 효과 */
+        }
+
+        .image-links img:hover {
+            transform: scale(1.1); /* 마우스 올리면 커짐 */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#music" onclick="showMusic()">환영</a>
+        <a href="#profile">소개</a>
+        <a href="#links">링크</a>
+    </nav>
+</header>
+
+<!-- 🎤 인사말 -->
+<section class="greeting">
+    <div>안녕하세요, 조효준입니다.</div>
+    <div class="music-controls">
+        <button onclick="playAudio()">▶ 재생</button>
+        <button onclick="pauseAudio()">⏸ 정지</button>
+    </div>
+</section>
+
+<!-- 🎵 음악 플레이어 -->
+<section id="music">
+    <audio id="audioPlayer" src="music.mp3"></audio>
+</section>
+
+<!-- 🧑‍💻 자기소개 페이지 -->
+<section id="profile">
+    <img src="3.jpg" alt="Profile Image" class="profile-img">
+    <div class="profile-info">
+        <p>나이: 24</p>
+        <p>취미: 코딩</p>
+        <p>미래를 위하여 화이팅!</p>
+    </div>
+</section>
+
+<!-- 🔗 이미지 클릭하면 이동 -->
+<section id="links">
+    <h1>내 SNS</h1>
+    <div class="image-links">
+        <a href="https://github.com/whiteappel/" target="_blank">
+            <img src="git.png" alt="GitHub">
+        </a>
+        <a href="https://148june.tistory.com/" target="_blank">
+            <img src="tistory.png" alt="Tistory">
+        </a>
+    </div>
+</section>
+
+<script>
+    // 🎵 오디오 재생 / 정지 기능
+    function playAudio() {
+        document.getElementById("audioPlayer").play();
+    }
+
+    function pauseAudio() {
+        document.getElementById("audioPlayer").pause();
+    }
+
+    // 음악 섹션을 보이게 하는 함수
+    function showMusic() {
+        document.getElementById("music").style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
