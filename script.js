@@ -42,11 +42,11 @@ document.querySelectorAll('.scroll-link').forEach(link => {
 
  $(document).ready(function () {
     let member_list = [
-        { name: "이귀현", img: "./static/img/1.jpg", site: "./static/page/1/LKH.html" },
-        { name: "조효준", img: "./static/img/2.jpg", site: "./static/page/2/JHJ.html" },
-        { name: "이소미", img: "./static/img/3.png", site: "./static/page/3/isomindex.html" },
-        { name: "임지윤", img: "./static/img/4.png", site: "./static/page/4/IJY.html" },
-        { name: "성우영", img: "./static/img/5.jpg", site: "https://swy.kro.kr" }
+        { name: "이귀현", img: "./static/img/1.jpg", site: "/static/page/1/LKH.html" },
+        { name: "조효준", img: "./static/img/2.jpg", site: "/static/page/2/JHJ.html" },
+        { name: "이소미", img: "./static/img/3.png", site: "/static/page/3/isomindex.html" },
+        { name: "임지윤", img: "/static/img/4.png", site: "/static/page/4/IJY.html" },
+        { name: "성우영", img: "/static/img/5.jpg", site: "https://swy.kro.kr" }
     ];
 
     let member_div = $(".member-div");
